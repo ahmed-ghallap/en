@@ -5,6 +5,7 @@ $poppins-font: 'Changa', sans-serif;
 $c-light: PowderBlue;
 $c-base: #229fa7;
 $c-dark: #275459;
+$c-blue: CornflowerBlue;
 * {
     font-family: $poppins-font;
     box-sizing: border-box;
@@ -130,20 +131,18 @@ section {
     min-height: 70vh;
 }
 
-.about {
+.small-section , .big-section{
     background-color: #eee;
     display: flex;
     justify-content: center;
-    min-height: 70vh;
-
-    // margin-top: -20%;
+    box-shadow: $c-dark 5px 5px 11px;
     margin-bottom: 50px;
     .photo {
         display: inline-block;
         width: 50%;
-        background-image: url(me3-removebg-preview.png), url(https://images.unsplash.com/photo-1497211419994-14ae40a3c7a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);
+        background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: contain;
     }
     .content {
         padding: 20px 30px;
@@ -151,23 +150,60 @@ section {
         width: 50%;
         background-color: #eee;
         h2 {
-            border-top: 2px solid green;
+            border-top: 2px solid $c-base;
             text-transform: uppercase;
             font-size: 2em;
             font-weight: 700;
+            margin-bottom: 35px;
+            color: $c-dark;
             span {
                 margin-top: -20px;
                 display: block;
+                color: $c-base;
             }
         }
-
         p {
             padding-left: 40px;
         }
     }
+    
+}
 
+#about {
+    .photo {
+        background-image: url(me.png), linear-gradient(to right, $c-light, $c-dark);        
+    }
+}
+
+.big-section {
+    padding: 40px 0;
+    width: 100%;
+    background-color: $c-base;
+    // background-image: linear-gradient($c-light,  $c-base, $c-light);
+    .content {
+        width: 98%;
+        h2 {
+            border-top: 2px solid yellowgreen;
+            text-align: center;
+            span {
+                display: inline;
+            }
+            
+        }
+    }
 }
 
 
+form {
+    div {
+        display: grid;
+        // grid-template-columns: center;
+    }
 
+    .message {
+        input  {
+            height: 200px;
+        }
+    }
+}
 
